@@ -6,13 +6,9 @@
      vdom: "global"
      host: "192.168.0.107"
   tasks:
-  - name: backup system config
-    fortiosconfig:
-     config: "system config backup"
-     action: "backup"
-     host:  "{{ host }}"
-     username: "{{ username }}"
-     password: "{{ password }}"
-     vdom:  "{{ vdom }}"
-     config_parameters:
-      filename: "backup_config_001"
+- name: Backup current config
+  fortios_config:
+    host: 192.168.0.107
+    username: admin
+    password: 1qaz!QAZ
+    backup: yes
