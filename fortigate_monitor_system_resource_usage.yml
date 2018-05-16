@@ -2,9 +2,9 @@
   gather_facts: no
   vars:
      username: "admin"
-     password: ""
+     password: "1qaz!QAZ"
      vdom: "root"
-     host: "192.168.122.40"
+     host: "192.168.0.107"
   tasks:
     - name: Get system resource usage
       fortiosconfig:
