@@ -1,21 +1,21 @@
 ---
 - hosts: 192.168.0.107
-  vars:
-   host: "192.168.0.107"
-   username: "admin"
-   password: "1qaz!QAZ"
-   vdom: "global"
-  tasks:
-  - name: backup system config
-    fortios_config:
-      host: 192.168.0.107
-      username: admin
-      password: 1qaz!QAZ
-     config: "system config backup"
-     action: "backup"
-     host:  "{{ host }}"
-     username: "{{ username }}"
-     password: "{{ password }}"
-     vdom:  "{{ vdom }}"
-     config_parameters:
-      filename: "backup_config_001"
+vars:
+host: "192.168.0.107"
+username: "admin"
+password: "1qaz!QAZ"
+vdom: "global"
+tasks:
+- name: backup system config
+fortios_config:
+host: 192.168.0.107
+username: admin
+password: 1qaz!QAZ
+config: "system config backup"
+action: "backup"
+host:  "{{ host }}"
+username: "{{ username }}"
+password: "{{ password }}"
+vdom:  "{{ vdom }}"
+config_parameters:
+filename: "backup_config_001"
