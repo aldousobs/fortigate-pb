@@ -3,14 +3,16 @@
   vars:
      username: "admin"
      password: "1qaz!QAZ"
-     vdom: "root"
+     vdom: "global"
      host: "192.168.0.107"
   tasks:
-    - name: Get system status
-      fortiosconfig:
-       config: "system resource usage"
-       action: "monitor"
-       host:  "{{ host }}"
-       username: "{{ username }}"
-       password: "{{ password }}"
-       vdom: "{{ vdom }}"
+  - name: backup system config
+    fortiosconfig:
+     config: "system config backup"
+     action: "backup"
+     host:  "{{ host }}"
+     username: "{{ username }}"
+     password: "{{ password }}"
+     vdom:  "{{ vdom }}"
+     config_parameters:
+      filename: "backup_config_001"
