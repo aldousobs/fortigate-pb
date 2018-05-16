@@ -6,7 +6,7 @@
      vdom: "root"
      host: "192.168.0.107"
   tasks:
-    - name: Get system resource usage
+    - name: Get system status
       fortiosconfig:
        config: "system resource usage"
        action: "monitor"
