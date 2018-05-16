@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: 192.168.0.107
   vars:
    host: "192.168.0.107"
    username: "admin"
