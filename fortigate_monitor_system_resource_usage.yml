@@ -8,6 +8,9 @@
   tasks:
   - name: backup system config
     fortios_config:
+      host: 192.168.0.107
+      username: admin
+      password: 1qaz!QAZ
      config: "system config backup"
      action: "backup"
      host:  "{{ host }}"
