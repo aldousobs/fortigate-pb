@@ -7,7 +7,7 @@
    vdom: "global"
   tasks:
   - name: backup system config
-    fortiosconfig:
+    fortios_config:
      config: "system config backup"
      action: "backup"
      host:  "{{ host }}"
