@@ -1,11 +1,3 @@
-- hosts: localhost
-  gather_facts: no
-  vars:
-     username: "admin"
-     password: "1qaz!QAZ"
-     vdom: "global"
-     host: "192.168.0.107"
-  tasks:
 - name: Backup current config
   fortios_config:
     host: 192.168.0.107
