@@ -1,16 +1,14 @@
 ---
-- hosts: all
+- hosts: localhost    # 実機を対象としない。ここではダミー的に localhost とする
   gather_facts: no
   connection: local
 
   tasks:
-- name: Register french addresses
-  fortios_address:
-    host: 192.168.0.254
-    username: admin
-    password: 1qaz!QAZ
-    state: present
-    name: "fromfrance"
-    type: geography
-    country: FR
-    comment: "French geoip address"
+    - name: Register google DNS
+      fortios_address:
+        state: present
+        name: "google_dns"
+        type: ipmask
+        value: 8.8.8.8
+        file_mode: yes 　 　         # 実機ではなくコンフィグファイルを操作対象とするモード
+        config_file: forti.config 
