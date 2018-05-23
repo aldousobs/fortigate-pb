@@ -22,7 +22,8 @@
         id: 0        
         src_addr: all
         dst_addr: all
-        service: "http"
+        service:
+          - HTTP
         nat: True
         state: present
         policy_action: accept
