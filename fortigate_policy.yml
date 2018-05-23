@@ -8,7 +8,7 @@
   fortios_address:
     host: 192.168.0.254
     username: admin
-    password: p4ssw0rd
+    password: 1qaz!QAZ
     state: present
     name: "fromfrance"
     type: geography
