@@ -1,5 +1,5 @@
 ---
-- hosts: forti
+- hosts: Fortigate
   gather_facts: no
   connection: local
 
