@@ -4,19 +4,13 @@
   connection: local
 
   tasks:
-    - name: manage policy
-      fortios_ipv4_policy:
-        host: "{{ inventory_hostname }}"
-        username: admin
-        password: 1qaz!QAZ
-        id: 0
-        src_intf: port1
-        src_addr: all
-        dst_intf: port2
-        dst_addr: all
-        services:
-          - FTP
-          - HTTP
-          - HTTPS
-        state: present
-        policy_action: accept
+- name: Register french addresses
+  fortios_address:
+    host: 192.168.0.254
+    username: admin
+    password: p4ssw0rd
+    state: present
+    name: "fromfrance"
+    type: geography
+    country: FR
+    comment: "French geoip address"
