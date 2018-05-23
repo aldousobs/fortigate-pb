@@ -7,8 +7,8 @@
     - name: manage policy
       fortios_ipv4_policy:
         host: "{{ inventory_hostname }}"
-        username: "{{ ansible_user }}"
-        password: "{{ ansible_password }}"
+        username: "admin"
+        password: "1qaz!QAZ"
         id: 1
         src_intf: port1
         src_addr: all
