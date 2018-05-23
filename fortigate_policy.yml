@@ -10,7 +10,6 @@
         username: "{{ ansible_user }}"
         password: "{{ ansible_password }}"
         id: 1
-        name: ALL 
         src_addr: all
         dst_addr: all
         services:
