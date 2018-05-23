@@ -13,3 +13,17 @@
         name: "google_dns"
         type: ipmask
         value: 8.8.8.8
+        
+    - name: Allow external DNS call
+      fortios_ipv4_policy:
+        host: 192.168.0.101
+        username: admin
+        password: 1qaz!QAZ
+        id: 0        
+        src_addr: all
+        dst_addr: all
+        service: dns
+        nat: True
+        state: present
+        policy_action: accept
+        logtraffic: disable
