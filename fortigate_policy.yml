@@ -6,6 +6,9 @@
   tasks:
     - name: Register google DNS
       fortios_address:
+        host: 192.168.0.101
+        username: admin
+        password: 1qaz!QAZ
         state: present
         name: "google_dns"
         type: ipmask
