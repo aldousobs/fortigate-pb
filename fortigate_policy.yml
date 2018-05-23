@@ -1,21 +1,19 @@
 ---
-- hosts: 192.168.0.101
-vars:
-host: "192.168.0.101"
-username: "admin"
-password: "1qaz!QAZ"
-vdom: "global"
-tasks:
-- name: Allow external DNS call
-  fortios_ipv4_policy:
-    host: 192.168.0.101
-    username: admin
-    password: 1qaz!QAZ
-    id: 1
-    src_addr: 192.168.0.1/24
-    dst_addr: all
-    service: dns
-    nat: True
-    state: present
-    policy_action: accept
-    logtraffic: disable
+- hosts: forti
+  gather_facts: no
+  connection: local
+
+  tasks:
+    - name: manage policy
+      fortios_ipv4_policy:
+        host: "{{ inventory_hostname }}"
+        username: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        id: 1
+        src_addr: all
+        dst_addr: all
+        services:
+          - HTTP
+          - HTTPS
+        state: present
+        policy_action: accept
