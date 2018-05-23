@@ -10,9 +10,12 @@
         username: "{{ ansible_user }}"
         password: "{{ ansible_password }}"
         id: 1
+        src_intf: port1
         src_addr: all
+        dst_intf: port2
         dst_addr: all
         services:
+          - FTP
           - HTTP
           - HTTPS
         state: present
