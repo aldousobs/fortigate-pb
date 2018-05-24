@@ -2,15 +2,7 @@
 - hosts: localhost    
   gather_facts: no
   connection: local
-  
-  vars_prompt:
-    - name: "name"
-      prompt: "what is the source ip?"
-    - name: "quest"
-      prompt: "what is the destination ip?"
-    - name: "favcolor"
-      prompt: "what is allowed service?"
-  
+
   tasks:
     - name: Register google DNS
       fortios_address:
