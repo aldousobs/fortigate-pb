@@ -2,10 +2,6 @@
 - hosts: localhost    
   gather_facts: yes
   connection: local
-   
-  vars_prompt:
-    - name: "name"
-      prompt: "what is the source ip?"
 
   tasks:
     - name: Register google DNS
