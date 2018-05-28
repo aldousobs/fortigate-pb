@@ -16,7 +16,6 @@
         
     - name: Allow external DNS call
       fortios_ipv4_policy:
-        host: 192.168.0.101
         username: admin
         password: 1qaz!QAZ
         id: 0        
