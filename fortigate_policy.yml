@@ -19,7 +19,9 @@
         host: 192.168.0.101
         username: admin
         password: 1qaz!QAZ
-        id: 0        
+        id: 0     
+        src_intf: port1
+        dst_intf: port2
         src_addr: all
         dst_addr: all
         service:
