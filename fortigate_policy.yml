@@ -24,6 +24,7 @@
         dst_addr: all
         service:
           - HTTP
+          - HTTPS
         nat: True
         state: present
         policy_action: accept
