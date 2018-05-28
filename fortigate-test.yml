@@ -4,7 +4,7 @@
   connection: local
 
   tasks:
-    - name: Register google DNS
+    - name: Adding new address Object
       fortios_address:
         host: 192.168.0.101
         username: admin
@@ -14,7 +14,7 @@
         type: ipmask
         value: 8.8.8.8
         
-    - name: Allow external DNS call
+    - name: Create new rule
       fortios_ipv4_policy:
         host: 192.168.0.101
         username: admin
@@ -30,4 +30,4 @@
         nat: True
         state: present
         policy_action: accept
-        logtraffic: disable
+        logtraffic: enable
