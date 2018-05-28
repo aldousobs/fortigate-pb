@@ -30,4 +30,4 @@
         nat: True
         state: present
         policy_action: accept
-        logtraffic: enable
+        logtraffic: utm
