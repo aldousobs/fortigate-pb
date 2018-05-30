@@ -19,4 +19,3 @@
         nat: True
         state: present
         policy_action: accept
-logtraffic: utm
