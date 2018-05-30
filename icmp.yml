@@ -1,0 +1,22 @@
+---
+- hosts: localhost    
+  gather_facts: yes
+  connection: local
+
+  tasks:
+    - name: Create new rule
+      fortios_ipv4_policy:
+        host: 192.168.0.101
+        username: admin
+        password: 1qaz!QAZ
+        id: 0        
+        src_intf: port1
+        dst_intf: port2
+        src_addr: all
+        dst_addr: all
+        service:
+          - ALL_ICMP
+        nat: True
+        state: present
+        policy_action: accept
+logtraffic: utm
