@@ -1,0 +1,14 @@
+---
+- hosts: localhost    
+  gather_facts: yes
+  connection: local
+
+  tasks:
+    - name: Backup Configuration
+      fortios_config:
+        host: 192.168.0.101
+        username: admin
+        password: 1qaz!QAZ
+        state: present
+        backup: yes
+        backup_path: /etc/ansible/backup/
