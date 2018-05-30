@@ -2,13 +2,12 @@
 - hosts: localhost
   gather_facts: yes
   connection: local
-
+  
   tasks:
-    - name: Backup Configuration
+    - name: Backup current config
       fortios_config:
         host: 192.168.0.101
         username: admin
         password: 1qaz!QAZ
-        backup_path: /etc/ansible/backup/
-        backup: yes
-        
+        backup_path: /etc/ansible/backup/  # バックアップ先ディレクトリ
+        backup: yes  # バックアップする指定
