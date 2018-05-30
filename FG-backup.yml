@@ -11,3 +11,4 @@
         username: admin
         password: 1qaz!QAZ
         backup: yes
+        backup_path: /etc/ansible/backup/
