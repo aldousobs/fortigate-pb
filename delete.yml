@@ -10,4 +10,4 @@
         username: admin
         password: 1qaz!QAZ
         id: 1       
-        state: ansent
+        state: absent
