@@ -9,5 +9,5 @@
         host: 192.168.0.101
         username: admin
         password: 1qaz!QAZ
-        backup_path: /etc/ansible/backup/  # バックアップ先ディレクトリ
-        backup: yes  # バックアップする指定
+        backup_path: /root/
+        backup: yes
