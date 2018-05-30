@@ -11,4 +11,4 @@
         username: admin
         password: 1qaz!QAZ
         file_mode: yes
-        backup_path: /etc/ansible/backup/
+        config_file: /etc/ansible/backup/abc.txt
