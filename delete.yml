@@ -3,7 +3,7 @@
   gather_facts: yes
   connection: local
   vars:
-    fg-id: "1"
+    fg_id: "1"
     
   tasks:
     - name: delete
@@ -11,5 +11,5 @@
         host: 192.168.0.101
         username: admin
         password: 1qaz!QAZ
-        id: "{{ fg-id }}"   
+        id: "{{ fg_id }}"   
         state: absent
