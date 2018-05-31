@@ -2,6 +2,8 @@
 - hosts: localhost    
   gather_facts: yes
   connection: local
+  vars:
+    fg-id: 1
 
   tasks:
     - name: delete
