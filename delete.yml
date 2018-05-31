@@ -9,13 +9,5 @@
         host: 192.168.0.101
         username: admin
         password: 1qaz!QAZ
-        id: 1       
-        state: absent
-        
-    - name: delete
-      fortios_ipv4_policy:
-        host: 192.168.0.101
-        username: admin
-        password: 1qaz!QAZ
-        id: 2
+        id: {{fg-id}}       
         state: absent
